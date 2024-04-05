@@ -2,7 +2,7 @@
 # Set a version for this new box.
 - name: Get current box version from Vagrant.
   uri:
-    url: https://app.vagrantup.com/api/v1/box/geerlingguy/{{ item }}
+    url: https://app.vagrantup.com/api/v1/box/raufhammad/{{ item }}
     return_content: true
   register: box_info
 
@@ -17,10 +17,10 @@
 
 - name: Print info about current box.
   debug:
-    msg: "Building new geerlingguy/{{ item }} box version {{ new_box_version }}"
+    msg: "Building new raufhammad/{{ item }} box version {{ new_box_version }}"
 
 # Build and push the new box.
 - name: Build and push the box using Packer.
   command: >
-    packer build -var 'version={{ new_box_version }}' box-config.json
+    packer build -var 'version={{ new_box_version }}' box-config.json.pkr.hcl
     chdir={{ item }}
