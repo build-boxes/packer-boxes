@@ -15,6 +15,7 @@ This project contains the Packer build configurations for all of Jeff Geerling's
 All of these boxes are available as public, free Vagrant boxes and can be used with the command:
 
     vagrant init geerlingguy/[box name here]
+    vagrant init raufhammad/[box name here]
 
 You can also fork this repository and customize a build configuration with your own Ansible roles and playbooks to build a fully custom Vagrant box using Packer. For one such example, see the [Drupal VM Packer Build](https://github.com/geerlingguy/packer-drupal-vm).
 
@@ -32,6 +33,8 @@ The following software must be installed/present on your local machine before yo
 Make sure all the required software (listed above) is installed, then cd into one of the box directories and run:
 
     $ packer build -var 'version=1.2.0' box-config.json
+    $ packer build -var 'version=0.0.1' box-config.json.pkr.hcl
+
 
 After a few minutes, Packer should tell you the box was generated successfully, and the box was uploaded to Vagrant Cloud.
 

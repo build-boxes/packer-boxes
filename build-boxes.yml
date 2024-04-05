@@ -7,12 +7,8 @@
     boxes:
       - rockylinux8
       - centos7
-      - debian12
-      #- debian11
-      #- debian10
-      #- debian9
-      #- ubuntu1804
       - ubuntu2004
+      - debian12      
     versions: {}
 
   tasks:

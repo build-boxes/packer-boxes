@@ -1,8 +1,9 @@
 #!/bin/bash -eux
 
 # Uninstall Ansible and dependencies.
-pip3 uninstall ansible
-apt-get remove python3-pip python3-dev
+#pip3 uninstall ansible
+#apt-get remove python3-pip python3-dev
+apt-get remove -y ansible
 
 # Apt cleanup.
 apt autoremove -y

@@ -4,3 +4,4 @@
 iso/*
 .vagrant/*
 */output*/*
+*/.vagrant/*
