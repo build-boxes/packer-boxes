@@ -7,6 +7,7 @@
     boxes:
       - rockylinux8
       - centos7
+      - centos9
       - ubuntu2004
       #- ubuntu2404
       - debian12
