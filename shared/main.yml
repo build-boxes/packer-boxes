@@ -15,7 +15,7 @@
   roles:
     - role: geerlingguy.nfs
 
-    - role: geerlingguy.packer_rhel
+    - role: hammadrauf.ansible-role-packer_rhel
       when: ansible_os_family == 'RedHat'
 
     - role: geerlingguy.packer-debian

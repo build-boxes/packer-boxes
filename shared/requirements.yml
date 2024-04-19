@@ -1,5 +1,5 @@
 ---
 roles:
-  - geerlingguy.packer_rhel
+  - hammadrauf.ansible-role-packer_rhel
   - geerlingguy.packer-debian
   - geerlingguy.nfs
