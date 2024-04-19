@@ -1,4 +1,4 @@
-# Jeff Geerling's Vagrant Box Packer Builds
+# A fork of Jeff Geerling's Vagrant Box Packer Builds
 
 ![Validate Packer JSON files](https://github.com/build-boxes/packer-boxes/workflows/Validate%20Packer%20JSON%20files/badge.svg)
 
@@ -66,6 +66,8 @@ Test that the box works correctly, then tear it down with:
 
 MIT
 
-## Author
+## Author and Maintainer
 
-These configurations are maintained by [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com).
+
+These configurations were originally published by [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com) on his Github Repository.
+These configurations are a fork from above and maintained by [Hammad Rauf](https://andromedabay.ddns.net/).
