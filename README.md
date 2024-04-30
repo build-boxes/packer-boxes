@@ -62,6 +62,11 @@ Test that the box works correctly, then tear it down with:
 
     $ vagrant destroy -f
 
+## Building Your Own Vagrant Images
+
+1. Ubuntu24.04 - Noble Numbat. Links [https://askubuntu.com/questions/1403686/ubuntu-22-04-autoinstall-method](https://askubuntu.com/questions/1403686/ubuntu-22-04-autoinstall-method)
+
+
 ## License
 
 MIT
@@ -69,5 +74,5 @@ MIT
 ## Author and Maintainer
 
 
-These configurations were originally published by [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com) on his Github Repository.
+These configurations were originally published by [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com) on his Github Repository.  
 These configurations are a fork from above and maintained by [Hammad Rauf](https://andromedabay.ddns.net/).
