@@ -1,0 +1,74 @@
+#cloud-config
+autoinstall:
+    version: 1
+  apt:
+    disable_components: []
+    fallback: offline-install
+    geoip: true
+    mirror-selection:
+      primary:
+      - country-mirror
+      - arches: &id001
+        - amd64
+        - i386
+        uri: http://archive.ubuntu.com/ubuntu/
+      - arches: &id002
+        - s390x
+        - arm64
+        - armhf
+        - powerpc
+        - ppc64el
+        - riscv64
+        uri: http://ports.ubuntu.com/ubuntu-ports
+    preserve_sources_list: false
+    security:
+    - arches: *id001
+      uri: http://security.ubuntu.com/ubuntu/
+    - arches: *id002
+      uri: http://ports.ubuntu.com/ubuntu-ports
+  codecs:
+    install: true
+  drivers:
+    install: true
+  identity:
+    hostname: ubuntu-numbat
+    password: $6$eAgEjp8MOliZkC2k$5sX5YRAuk1WR5R96Ya5jV75nPYYfeqSp4Gx87/zH/CN1o9Yje7vJvlWpBAI2BJjCjxdh4izRN22QEpfhwfgdz0
+    realname: vagrant
+    username: vagrant
+  kernel:
+    package: linux-generic
+  keyboard:
+    layout: us
+    toggle: null
+    variant: ''
+  locale: en_US.UTF-8
+  network:
+    ethernets:
+      enp0s3:
+        dhcp4: true
+    version: 2
+  storage:
+    layout:
+      name: lvm
+  source:
+    id: ubuntu-server-minimal
+    search_drivers: true
+  ssh:
+    allow-pw: true
+    authorized-keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDnC74CEcgSXi6w4Mxp1e/6a5EJc1P00vX2EMo3C5Ez58ZmPsJHoktMOiiqNwK7dfzipyH+jTiwRx0YRPUTe7bGncS0lWM7A8eTrEsivJG8twWw9ILGfUJurjzoeSComIUxzQyJ8ptcVYgq/NFrAlBp/FwBgTfx45k+d0Tq9qUwqdfBBRP73YemAOGLQh88a7E2vT42wc6cM7hq3j2wpVv5FsEMLexW1zxF2RcZbwouXb4ri3605tWS0eU8hq0oxnUc8UxagN3p4prttVbRN0XTD6QM8Pu5fCbF+pE2BwX526VxDAgRuuz48tbmVXpkbQ7wJIJXcJjRFq2UVfReQFJNbhYVLUo78y3QHfERPGwHvvfqVjGLGavDhZhBMAHB3U6ovNTS1nHouiPAre/F+xzkGVxD1Pi11iiLLYK7Jr6uzrUmE6gkKn2CKgqrWMTYhMHEiCA/HwM5S06Ze7PVaVLnUT9RhawfNq4KlBz38lvMldoYOlTRoqm165f++nM1zRs= hamma@Polaris"
+    install-server: true        
+  snaps:
+    - name: go
+      channel: 1.20/stable
+      classic: true
+  packages:
+      - iputils-ping
+      - nano
+      - vim
+      - sudo
+  user-data:
+      disable_root: false
+  late-commands:
+      - sed -ie 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=30/' /target/etc/default/grub
+      - reboot
