@@ -18,7 +18,7 @@
     - role: hammadrauf.ansible-role-packer_rhel
       when: ansible_os_family == 'RedHat'
 
-    - role: geerlingguy.packer-debian
+    - role: hammadrauf.packer-debian
       when: ansible_os_family == 'Debian'
 
   tasks:
