@@ -1,4 +1,4 @@
-# Packer Build - Debian 12 minimal Vagrant Box
+# Packer Build - Debian 12 KDE Vagrant Box
 
 **Current Debian Version Used**: 12.5.0
 
