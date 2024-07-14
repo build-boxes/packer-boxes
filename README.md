@@ -66,6 +66,13 @@ Test that the box works correctly, then tear it down with:
 
 1. Ubuntu24.04 - Noble Numbat. Links [https://askubuntu.com/questions/1403686/ubuntu-22-04-autoinstall-method](https://askubuntu.com/questions/1403686/ubuntu-22-04-autoinstall-method)
 
+## 'vagrant-cloud' Replaced by 'vagrant-registry'
+vagrant-registry provider has been added in packer plugins "github.com/hashicorp/vagrant"
+```
+$ packer plugins install github.com/hashicorp/vagrant
+```
+VagrantCloud is being decommisioned and replaced by HCL Vagrant Repository.  Read the migration documents.
+
 ## Useful Links (Hammad Rauf)
 
 1. [Packer Boot Options](https://developer.hashicorp.com/packer/integrations/hashicorp/virtualbox/latest/components/builder/iso#boot-configuration)
