@@ -60,6 +60,11 @@ build {
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -S -E bash '{{ .Path }}'"
+    script          = "scripts/vagrant_ssh_insecure_key.sh"
+  }
+
+  provisioner "shell" {
+    execute_command = "echo 'vagrant' | {{ .Vars }} sudo -S -E bash '{{ .Path }}'"
     script          = "scripts/cleanup.sh"
   }
 
